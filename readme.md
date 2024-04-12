@@ -37,3 +37,5 @@ ORDER BY order_month ASC, category;
 #### Insight
 There are product categories where the burn rate has exceeded the maximum expected rate of 43%, specifically in the <b>footwear</b> and <b>outerwear</b> categories. However, these categories actually have low sales figures, indicating that the company is spending a lot on promotions for products that are not growing, or these categories are consuming significant promotional budgets without yielding the expected sales results.
 
+#### Note
+This is one of projects in GenggamData SQL Bootcamp
