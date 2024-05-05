@@ -11,10 +11,14 @@ SELECT EXTRACT(MONTH FROM order_date) order_month,
 	   SUM(purchase_amount_usd) sales,
 	   ROUND(SUM(discount/100*purchase_amount_usd),2) promotion_value,
 	   ROUND(SUM(discount/100*purchase_amount_usd) / SUM(purchase_amount_usd)*100,2) burn_rate_percentage
-FROM customer_transaction
-WHERE EXTRACT(YEAR FROM order_date) = 2023
-GROUP BY order_month
-ORDER BY order_month ASC;
+FROM
+	customer_transaction
+WHERE
+	EXTRACT(YEAR FROM order_date) = 2023
+GROUP BY
+	order_month
+ORDER BY
+	order_month ASC;
 ```
 
 #### Insight
@@ -28,10 +32,14 @@ SELECT EXTRACT(MONTH FROM order_date) order_month,
 	   SUM(purchase_amount_usd) sales,
 	   ROUND(SUM(discount/100*purchase_amount_usd),2) promotion_value,
 	   ROUND(SUM(discount/100*purchase_amount_usd) / SUM(purchase_amount_usd)*100,2) burn_rate_percentage
-FROM customer_transaction
-WHERE EXTRACT(YEAR FROM order_date) = 2023
-GROUP BY order_month, category
-ORDER BY order_month ASC, category;
+FROM
+	customer_transaction
+WHERE
+	EXTRACT(YEAR FROM order_date) = 2023
+GROUP BY
+	order_month, category
+ORDER BY
+	order_month ASC, category;
 ```
 
 #### Insight
